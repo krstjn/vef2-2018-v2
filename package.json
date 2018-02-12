@@ -16,7 +16,23 @@
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
+    "express-session": "^1.2.3",
+    "pg": "^7.4.1",
     "pug": "^2.0.0-rc.4"
-  }
+  },
+  "description": "Útfæra skal Express vefþjón sem birtir skráningar form og hefur „stjórnsíðu“ þar sem hægt er að skoða allar skráningar.",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kth130/vef2-2018-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kth130/vef2-2018-v2/issues"
+  },
+  "homepage": "https://github.com/kth130/vef2-2018-v2#readme"
 }
