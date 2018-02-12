@@ -93,3 +93,9 @@ Skilaboð skulu innihalda slóð á GitHub repo fyrir verkefni, og dæmatímaken
 Sett verða fyrir sex minni verkefni þar sem fimm bestu gilda 6% hvert, samtals 30% af lokaeinkunn.
 
 Sett verða fyrir tvö hópa verkefni þar sem hvort um sig gildir 15%, samtals 30% af lokaeinkunn.
+
+Setja upp form
+ná að posta úr formi, validate með xss
+nota pakka til að setja inni töflu
+
+
