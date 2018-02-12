@@ -1,4 +1,18 @@
 extends layout
 
 block content
-  p Form!
+  div.form
+    form(method='POST' action='/register')
+          div.form-item
+            label(for='name') Name:
+            input(type='text', name='name')
+          div.form-item
+            label(for='email') Email:
+            input(type='email', placeholder='name@email.com' name='email')
+          div.form-item
+            label(for='ssn') Kennitala:
+            input(type='text', placeholder='000000-0000' name='ssn')
+          div.form-item
+            label(for='count') Fjöldi:
+            input(type='number' name='count')
+          button(type='submit') Senda
