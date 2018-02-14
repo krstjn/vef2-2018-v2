@@ -8,7 +8,7 @@ Skráningarform tekur við eftirfarandi gögnum:
 
 * Nafni, verður að vera skráð
 * Netfangi, verður að vera skráð og líta út fyrir að vera netfang
-* Kennitölu, verður að vera skráð og vera gild kennitala (???)
+* Kennitölu, verður að vera skráð
 * Fjölda, verður að vera skráð og verður að vera tala sem er stærri en 0
 
 Ef gögn eru ekki rétt skráð skal birta notanda villuskilaboð ásamt þeim gögnum sem áður voru skráð. Passa þarf upp á að gögn séu hrein, sérstaklega af `XSS` strengjum. Gögn skulu skráð örugglega (með _parameterized input_) í postgres grunn.
@@ -45,6 +45,13 @@ Notast skal við [Pug template](https://pugjs.org/) til að útbúa HTML. Sjá g
 `npm start` skal keyra upp vefþjón á `localhost` porti `3000`.
 
 Verkefnið skal keyra á Heroku og bjóða upp á innskráningu og vistun í gagnagrunn.
+
+Við lausn á verkefni er gott að líta til eftirfarandi dæma:
+
+* [Staðfesting gagna úr formi](https://github.com/vefforritun/vef2-2018/blob/master/fyrirlestrar/03/daemi/form/data-validator.js)
+* [select, async og await](https://github.com/vefforritun/vef2-2018/blob/master/fyrirlestrar/03/daemi/postgres/select-async-await.js)
+* [insert, async og await](https://github.com/vefforritun/vef2-2018/blob/master/fyrirlestrar/03/daemi/postgres/insert-async-await.js)
+* [passport.js dæmi](https://github.com/vefforritun/vef2-2018/blob/master/fyrirlestrar/05/daemi/auth/passport.js)
 
 ## Útlit
 
@@ -94,8 +101,14 @@ Sett verða fyrir sex minni verkefni þar sem fimm bestu gilda 6% hvert, samtals
 
 Sett verða fyrir tvö hópa verkefni þar sem hvort um sig gildir 15%, samtals 30% af lokaeinkunn.
 
-Setja upp form
-ná að posta úr formi, validate með xss
-nota pakka til að setja inni töflu
+Uppsetning a postgres.
 
+Prófa að koma gögnum inni í db
 
+Gera form og ná að skrá gögn þannig, nota pakka til að setja inni töflu
+
+Skrifa inn routin
+    sum þurfa að vera aðgangsstyrð
+
+Birta gögnin
+    

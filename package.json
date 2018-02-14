@@ -19,8 +19,11 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-session": "^1.2.3",
+    "passport": "0.4.0",
+    "passport-local": "^1.0.0",
     "pg": "^7.4.1",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "xss": "^0.3.7"
   },
   "description": "Útfæra skal Express vefþjón sem birtir skráningar form og hefur „stjórnsíðu“ þar sem hægt er að skoða allar skráningar.",
   "main": ".eslintrc.js",
