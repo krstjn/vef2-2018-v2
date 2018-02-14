@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.form
+    form(method='POST' action='/login')
+      div.form-item
+        label(for='name') Notandanafn:
+        input(type='text', name='username',)
+      div.form-item
+        label(for='password') Lykilorð:
+        input(type='password', name='password')
+      button Skrá inn
+  footer
+    a(href="/") Forsíða

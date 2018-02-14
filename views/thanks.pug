@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div
+    h1 Takk fyrir skráninguna
+    a(href="/") Aftur á forsíðu
+
+  footer
+    if loggedIn
+      p Skráður inn sem #{loggedIn}
+      a(href="/logout") Útskráning
+      a(href="/admin") Stjórnsíða
+    else
+      a(href="/login") Innskráning
