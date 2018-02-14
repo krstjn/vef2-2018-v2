@@ -3,5 +3,5 @@ CREATE TABLE info(
     dagsetning TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
     nafn varchar(64) NOT NULL,
     netfang varchar(64) NOT NULL,
-    ssn varchar(10) NOT NULL,
+    ssn varchar(11) NOT NULL,
     fjoldi integer);
