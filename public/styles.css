@@ -35,6 +35,8 @@ body {
 
 .form {
   display: flex;
+  position: absolute;
+  top: 0; bottom: 40px; left: 0; right: 0;
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
@@ -64,8 +66,12 @@ body {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -79,7 +85,7 @@ body {
 
 form {
   width: 50%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 ul {
