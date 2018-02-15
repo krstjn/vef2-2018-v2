@@ -40,7 +40,7 @@ router.get('/download', ensureLoggedIn, async (req, res) => {
 
 router.get('/', ensureLoggedIn, async (req, res) => {
   const data = await getData();
-  res.render('admin', { data });
+  res.render('admin', { data, title: 'Admin' });
 });
 
 module.exports = router;

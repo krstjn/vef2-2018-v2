@@ -6,9 +6,9 @@ const router = express.Router();
 function form(req, res) {
   const data = {};
   if (req.isAuthenticated()) {
-    res.render('form', { data, loggedIn: req.user.name });
+    res.render('form', { data, loggedIn: req.user.name, title: 'Forsíða' });
   } else {
-    res.render('form', { data });
+    res.render('form', { data, title: 'Forsíða' });
   }
 }
 
@@ -39,27 +39,27 @@ router.post('/', async (req, res) => {
   const errors = [];
 
   if (name === '') {
-    errors.push('Nafn má ekki vera tómt');
+    errors.push({ name: 'error', message: 'Nafn má ekki vera tómt' });
   }
 
   if (email === '') {
-    errors.push('Netfang má ekki vera tómt');
+    errors.push({ email: 'error', message: 'Netfang má ekki vera tómt' });
   }
 
   if (email.indexOf('@') < 0) {
-    errors.push('Netfang verður að vera netfang');
+    errors.push({ email: 'error', message: 'Netfang verður að vera netfang' });
   }
 
   if (ssn === '') {
-    errors.push('Kennitala má ekki vera tóm');
+    errors.push({ ssn: 'error', message: 'Kennitala má ekki vera tóm' });
   }
 
   if (!/^[0-9]{6}-?[0-9]{4}$/.test(ssn)) {
-    errors.push('Verður að vera kennitala');
+    errors.push({ ssn: 'error', message: 'Verður að vera kennitala' });
   }
 
   if (count === '' || !/^[1-9][0-9]*$/) {
-    errors.push('Þarf að vera heiltala stærri en 0');
+    errors.push({ count: 'error', message: 'Þarf að vera heiltala stærri en 0' });
   }
   const loggedIn = req.isAuthenticated();
 
@@ -68,6 +68,7 @@ router.post('/', async (req, res) => {
       errors,
       data: req.body,
       loggedIn,
+      title: 'Forsíða',
     });
   }
   const data = {
@@ -84,14 +85,14 @@ router.post('/', async (req, res) => {
 
 router.get('/thanks', (req, res) => {
   if (req.isAuthenticated()) {
-    res.render('thanks', { loggedIn: req.user.name });
+    res.render('thanks', { loggedIn: req.user.name, title: 'Takk fyrir' });
   } else {
-    res.render('thanks');
+    res.render('thanks', { title: 'takk fyrir' });
   }
 });
 
 router.get('/login', (req, res) => {
-  res.render('login');
+  res.render('login', { title: 'Innskráning' });
 });
 
 router.get('/', form);

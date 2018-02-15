@@ -1,13 +1,16 @@
 extends layout
 
 block content
-
-  
+  - var error = []
+  if errors
+    each val in errors
+      - error.push(val.error)
+    - console.log(error)
   div.form
     if errors
       ul
         each val in errors
-          li= val
+          li= val.message
     form(method='POST' action='/')
           div.form-item
             label(class='form-item-label' for='name') Nafn:
