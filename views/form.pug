@@ -2,27 +2,29 @@ extends layout
 
 block content
 
-  if errors
-    ul
-      each val in errors
-        li= val
+  
   div.form
+    if errors
+      ul
+        each val in errors
+          li= val
     form(method='POST' action='/')
           div.form-item
-            label(for='name') Name:
-            input(type='text', name='name', value=data.name)
+            label(class='form-item-label' for='name') Nafn:
+            input(class='form-item-input' type='text', name='name', value=data.name)
           div.form-item
-            label(for='email') Email:
-            input(type='text', name='email', value=data.email)
+            label(class='form-item-label' for='email') Netfang:
+            input(class='form-item-input' type='text', name='email', value=data.email)
           div.form-item
-            label(for='ssn') Kennitala:
-            input(type='text', name='ssn', value=data.ssn)
+            label(class='form-item-label' for='ssn') Kennitala:
+            input(class='form-item-input' type='text', name='ssn', value=data.ssn)
           div.form-item
-            label(for='count') Fjöldi:
-            input(type='text' name='count', value=data.count)
-          button(type='submit') Senda
+            label(class='form-item-label' for='count') Fjöldi:
+            input(class='form-item-input' type='text' name='count', value=data.count)
+          button.button Senda
 
-  footer
+  footer.footer
+    div.separator
     if loggedIn
       p Skráður inn sem #{loggedIn}
       a(href="/logout") Útskráning

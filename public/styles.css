@@ -14,8 +14,100 @@ html {
 }
 
 body {
+  max-width: 1200px;
+  margin: auto;
   font-family: Georgia, serif;
   font-size: 16px;
   background-color: #eee;
   color: #333;
+}
+
+.container {
+  height: auto;
+  margin: 20px auto;
+}
+
+.container-center {
+  height: auto;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-item {
+  text-align: left;
+  display: flex;
+  /* width: 70%; */
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.form-item-label {
+  font-size: 20px;
+  width: 30%;
+  margin-right: 10px;
+}
+
+.form-item-input {
+  width: 70%;
+}
+
+.separator {
+  width: 100%;
+  margin: 10px auto;
+  border-bottom: 1px solid #222;
+}
+
+.footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.button {
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+ul {
+  width: 50%;
+  margin: 0 auto;
+}
+
+li {
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  widows: 80%;
+  margin: 0 auto;
+}
+th {
+  background-color: #aaa;
+}
+
+td {
+  padding: 2px 4px;
 }

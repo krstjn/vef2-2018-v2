@@ -1,11 +1,12 @@
 extends layout
 
 block content
-  div
+  div.container-center
     h1 Takk fyrir skráninguna
     a(href="/") Aftur á forsíðu
 
-  footer
+  footer.footer
+    div.separator
     if loggedIn
       p Skráður inn sem #{loggedIn}
       a(href="/logout") Útskráning

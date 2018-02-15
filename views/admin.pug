@@ -1,22 +1,25 @@
 extends layout
 
 block content
-  table
-    tr
-      th Id
-      th Dagsetning
-      th Nafn
-      th Netfang
-      th Kennitala
-      th Fjöldi
-    each val in data
+  div
+    table.container
       tr
-        td= val.id
-        td= val.dagsetning
-        td= val.nafn
-        td= val.netfang
-        td= val.ssn
-        td= val.fjoldi
-        
-  h1 Skráður inn
-  a(href="/") Forsíða
+        th Id
+        th Dagsetning
+        th Nafn
+        th Netfang
+        th Kennitala
+        th Fjöldi
+      each val in data
+        tr
+          td= val.id
+          td= val.dagsetning
+          td= val.nafn
+          td= val.netfang
+          td= val.ssn
+          td= val.fjoldi
+    a(href='/admin/download') Sækja
+
+  footer.footer
+    div.separator
+    a(href="/") Forsíða
