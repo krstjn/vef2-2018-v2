@@ -36,7 +36,10 @@ body {
 .form {
   display: flex;
   position: absolute;
-  top: 0; bottom: 40px; left: 0; right: 0;
+  top: 0;
+  bottom: 40px;
+  left: 0;
+  right: 0;
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
