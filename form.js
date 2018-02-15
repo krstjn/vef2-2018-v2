@@ -1,5 +1,6 @@
 const express = require('express');
 const xss = require('xss');
+
 const router = express.Router();
 
 function form(req, res) {
@@ -60,7 +61,6 @@ router.post('/', async (req, res) => {
   if (count === '' || !/^[1-9][0-9]*$/) {
     errors.push('Þarf að vera heiltala stærri en 0');
   }
-  console.log(errors);
   const loggedIn = req.isAuthenticated();
 
   if (errors.length > 0) {

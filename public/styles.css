@@ -43,7 +43,6 @@ body {
 .form-item {
   text-align: left;
   display: flex;
-  /* width: 70%; */
   margin: 0 auto;
   padding: 10px 0;
 }
@@ -92,18 +91,18 @@ li {
   padding: 5px;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
 table {
   widows: 80%;
+  border-collapse: collapse;
   margin: 0 auto;
 }
+
 th {
   background-color: #aaa;
 }
