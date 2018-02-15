@@ -5,7 +5,7 @@ const router = express.Router();
 
 const { Client } = require('pg');
 
-const connectionString = 'postgres://notandi:123@localhost/v2';
+const connectionString = process.env.DATABASE_URL || 'postgres://notandi:123@localhost/v2';
 
 async function getData() {
   const query = 'SELECT * FROM info';
