@@ -35,7 +35,7 @@ router.post('/', async (req, res) => { // eslint-disable-line
     ssn = '',
     count = 0,
   } = req.body;
-  console.log(req.body);
+
   const errors = [];
 
   if (name === '') {
