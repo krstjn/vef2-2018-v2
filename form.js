@@ -35,7 +35,7 @@ router.post('/', async (req, res) => { // eslint-disable-line
     ssn = '',
     count = 0,
   } = req.body;
-
+  console.log(req.body);
   const errors = [];
 
   if (name === '') {
@@ -57,8 +57,7 @@ router.post('/', async (req, res) => { // eslint-disable-line
   if (!/^[0-9]{6}-?[0-9]{4}$/.test(ssn)) {
     errors.push({ ssn: 'error', message: 'Verður að vera kennitala' });
   }
-
-  if (count === '' || !/^[1-9][0-9]*$/) {
+  if (count === '' || !/^[1-9][0-9]*$/.test(count)) {
     errors.push({ count: 'error', message: 'Þarf að vera heiltala stærri en 0' });
   }
   const loggedIn = req.isAuthenticated();
