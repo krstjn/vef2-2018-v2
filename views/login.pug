@@ -2,14 +2,15 @@ extends layout
 
 block content
   div.form
-    form(method='POST' action='/login')
-      div.form-item
-        label(class='form-item-label' for='name') Notendanafn:
-        input(class='form-item-input' type='text', name='username',)
-      div.form-item
-        label(class='form-item-label' for='password') Lykilorð:
-        input(class='form-item-input' type='password', name='password')
-      button.button Skrá inn
+    div.form-cont
+      form(method='POST' action='/login')
+        div.form-item
+          label(class='form-item-label' for='name') Notendanafn:
+          input(class='form-item-input' type='text', name='username',)
+        div.form-item
+          label(class='form-item-label' for='password') Lykilorð:
+          input(class='form-item-input' type='password', name='password')
+        button.button Skrá inn
   footer.footer
     div.separator
     a(href="/") Forsíða

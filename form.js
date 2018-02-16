@@ -28,7 +28,7 @@ async function insertData(data) {
   await client.end();
 }
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { // eslint-disable-line
   const {
     name = '',
     email = '',

@@ -86,14 +86,14 @@ body {
   border: 1px solid black;
 }
 
-form {
+.form-cont {
   width: 50%;
   margin: auto;
 }
 
-ul {
-  width: 50%;
-  margin: 0 auto;
+.table-cont {
+  width: 100%;
+  margin: auto;
 }
 
 li {
